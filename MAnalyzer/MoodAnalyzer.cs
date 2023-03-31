@@ -2,9 +2,11 @@
 {
     public class MoodAnalyzer
     {
-        public void AnalyzeMood()
+        public string AnalyzeMood(string message)
         {
-            Console.WriteLine("Predicting mood by a message");
+            if (message.ToLower().Contains("sad"))
+                return "SAD";
+            return "HAPPY";
         }
     }
 }
