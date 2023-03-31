@@ -9,16 +9,16 @@ namespace MAnalyzerTest
         public void GivenSadMood_WhenAnalyze_ShouldReturnSad()
         {
             string message = "I am in sad mood";
-            MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
-            string res = moodAnalyzer.AnalyzeMood(message);
+            MoodAnalyzer moodAnalyzer = new MoodAnalyzer(message);
+            string res = moodAnalyzer.AnalyzeMood();
             Assert.AreEqual("SAD",res);
         }
         [Test]
         public void GivenAnyMood_WhenAnalyze_ShouldReturnHappy()
         {
             string message = "I am in good mood";
-            MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
-            string res = moodAnalyzer.AnalyzeMood(message);
+            MoodAnalyzer moodAnalyzer = new MoodAnalyzer(message);
+            string res = moodAnalyzer.AnalyzeMood();
             Assert.AreEqual("HAPPY", res);
         }
     }
