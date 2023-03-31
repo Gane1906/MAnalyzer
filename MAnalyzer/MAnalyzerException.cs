@@ -10,7 +10,7 @@ namespace MAnalyzer
     {
         public enum ExceptionType
         {
-            NULL_MOOD
+            NULL_MOOD,EMPTY_MOOD
         }
         public ExceptionType exceptionType;
         public MAnalyzerException(ExceptionType exceptionType,string message) :base(message)

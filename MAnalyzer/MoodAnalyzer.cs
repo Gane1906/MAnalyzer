@@ -11,6 +11,10 @@
         {
             try
             {
+                if(string.IsNullOrEmpty(this.message))
+                {
+                    throw new MAnalyzerException(MAnalyzerException.ExceptionType.EMPTY_MOOD, "message is empty");
+                }
                 if (message.ToLower().Contains("sad"))
                     return "SAD";
                 return "HAPPY";
